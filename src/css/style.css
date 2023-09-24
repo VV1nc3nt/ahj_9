@@ -1,0 +1,62 @@
+.collapse-btn {
+  margin: 100px 0 0 100px;
+  width: 150px;
+  padding: 16px;
+  background-color: rgb(173, 173, 239);
+  border-radius: 10px;
+  box-shadow: 4px 6px 6px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.collapsed-area {
+  margin: 16px 0 0 100px;
+  width: 400px;
+  height: 1px;
+  padding: 0;
+  border: none;
+  overflow: hidden;
+}
+
+.uncollapsed {
+  animation-name: uncollapse;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.collapsed {
+  animation-name: collapse;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes uncollapse {
+  from {
+    height: 1px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+  }
+
+  to {
+    height: 70px;
+    padding: 16px;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+}
+
+@keyframes collapse {
+  from {
+    height: 70px;
+    padding: 16px;
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+
+  to {
+    height: 1px;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+  }
+}
